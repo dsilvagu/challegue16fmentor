@@ -4,6 +4,10 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Header from '../components/Header.astro';
+import img1 from '../images/bg-desktop.svg';
+const stylehero = `background-image: url('${img1.src}')`;
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -16,7 +20,9 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="flex flex-col min-h-screen bg-pviolet text-[#FFFF] justify-between">
+	<body class="relative flex flex-col min-h-screen bg-pviolet text-[#FFFF] overscroll-none bg-no-repeat bg-cover justify-between" style={stylehero} >
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>

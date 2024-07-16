@@ -6,6 +6,9 @@ export default {
 			fontFamily: {
 				'poppins': ['"Poppins"', 'sans-serif'],
 				'opensans': ['"Open Sans Variable"', 'sans-serif']
+			},
+			backgroundImage:{
+				'hero': "url('/images/bg-desktop.svg')"
 			}
 		},
 		colors: {

@@ -3,14 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Content from '../components/Content.astro';
 import Footer from '../components/Footer.astro';
+import Container from '../components/Container.astro';
 import img1 from '../images/bg-mobile.svg';
 import img2 from '../images/bg-desktop.svg';
 ---
 
-<Layout title='FMentor'  >
-	<Header />
-	<Content />
-	<Footer />
-	<img class="absolute top-0 -z-10 w-full lg:hidden" src={img1.src} alt="">
-	<img class="absolute top-0 -z-10 w-full hidden lg:block h-full" src={img2.src} alt="">
+<Layout title='FMentor'>
+	<main class="px-5">
+		<Container>
+			<Content />
+		</Container>
+	</main>
 </Layout>
